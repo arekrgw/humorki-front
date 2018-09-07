@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900&subset=latin-ext');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+body{
+    background: url(images/body-background.jpg);
+    margin:0;
+    
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+

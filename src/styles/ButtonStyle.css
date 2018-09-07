@@ -1,0 +1,30 @@
+.login-button{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    color: red;
+    transition: all .15s ease-in-out;
+
+}
+.login-button:hover{
+    background: green;
+    border-color: green;
+    border-radius: 2px;
+    color: #111;
+
+}
+.acc-button{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid green;
+    color: green;
+    transition: all .15s ease-in-out;
+}
+.acc-button:hover{
+    background: green;
+    border-color: green;
+    border-radius: 2px;
+    color: #111;
+
+}
+

@@ -1,0 +1,127 @@
+.login-form{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+}
+.inAnimation{
+    animation: In .4s linear forwards;
+}
+
+
+.login-box{
+    width: 40%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 1)
+}
+
+.login-header{
+    background: #a00000;
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 32px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-blur{
+    filter: blur(3px);
+}
+
+.login-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actions{
+    width: 75%;
+    display: flex;
+    margin: 40px 0;
+}
+
+.go-button{
+    width: 90%;
+    padding: 9px;
+    font-size: 24px;
+    color: white;
+    background: #a00000;
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.go-button:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #750000;
+    border-radius: 0 0 2px 2px;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.go-button:hover:after{
+    height: 100%;
+    opacity: 0;
+}
+.go-button:hover{
+    background: #750000
+}
+
+.back-button{
+    width: 10%;
+    padding: 9px;
+    font-size: 24px;
+    color: white;
+    background: #a00000;
+    border-radius: 2px;
+    border: none;
+    position: relative;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.back-button:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #750000;
+    border-radius: 0 0 2px 2px;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+.back-button:hover:after{
+    height: 100%;
+    opacity: 0;
+}
+.back-button:hover{
+    background: #750000
+}
+
+@keyframes In {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
