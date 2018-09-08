@@ -9,3 +9,16 @@ export const getHumors = () => {
         payload: action
     }
 }
+
+export const postVote = (user, grade, refreshHumors) => {
+    const form = new FormData();
+    form.append("user", user);
+    form.append("grade", grade);
+    const query = "http://localhost/api/classes/_database.php?post=newhum";
+    const action = axios.post(query, form).then((response) => refreshHumors());
+
+    return {
+        type: 'POST_VOTE',
+        payload: action
+    }
+}

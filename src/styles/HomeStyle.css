@@ -1,8 +1,7 @@
-.menu{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.main-container{
+    width: 100%;
 }
+
 .menu-items-container{
     width: 100%;
     box-sizing: border-box;
@@ -72,68 +71,95 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    box-sizing: border-box;
 }
-.center-header h1{
+.school-name{
     width: 70%;
+}
+.school-name h1{
     font-size: 32px;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
 }
-
 .center-header p{
     width: 100%;
     text-align: center;
     font-size: 24px;
     font-weight: 100;
 }
-.center-header img{
+.logo{
     width: 30%;
     margin-bottom: 10px;
+}
+.center-header img{
+    width: 100%;
+    display: block;
 }
 footer{
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    color: rgba(255, 255, 255, 0.9);
 }
-footer h4:first-of-type{
+.author, .testers{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.author h4{
     font-size: 28px;
-    margin-top: 0;
-}footer p:first-of-type{
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-weight: 300;
 }
-footer h4{
-    color: #ddd;
+.author p{
+    font-size: 24px;
+    font-weight: 100;
+}
+.testers h4{
     font-size: 24px;
     font-weight: 300;
-    margin: 10px 0;
 }
-footer p{
-    color: #ccc;
+.testers p{
     font-size: 18px;
     font-weight: 100;
-
 }
 footer hr{
     width: 100%;
     border: 1px solid #333;
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
 }
-footer p:last-of-type{
-    font-weight: 300;
+
+@media screen and (min-width: 798px){
+    .menu-item{
+        width: 50%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo img{
+        width: 17%;
+        display: block;
+        margin: 0 auto;
+    }
+    .school-name h1{
+        font-size: 40px;
+    }
+    .author, .testers{
+        width: 50%;
+    }
 }
-/* .red{
-    border-color: red;
+@media screen and (min-width: 1080px){
+    .logo img{
+        width: 10%;
+        display: block;
+        margin: 0 auto;
+    }
+    .menu-item{
+        height: 400px;
+    }
 }
-.blue{
-    border-color: blue;
-}
-.yellow{
-    border-color: yellow;
-}
-.green{
-    border-color: green;
-} */
