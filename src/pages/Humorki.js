@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { getHumors, postVote } from '../actions';
+import Animation from 'react-addons-css-transition-group';
 
 import HumorTile from '../components/HumorTile';
+import SmallHeader from '../components/SmallHeader';
+
+import '../styles/animations.css';
+
 class Humorki extends Component {
   constructor(props){
     super(props);
@@ -13,6 +18,7 @@ class Humorki extends Component {
     }
     this.catchVote = this.catchVote.bind(this);
     this.checkVotedPeople = this.checkVotedPeople.bind(this);
+    this.showError = this.showError.bind(this);
   }
   componentDidMount(){
     this.props.getHumors();
@@ -63,9 +69,16 @@ class Humorki extends Component {
 
     }
     else{
-      this.setState({showError: true});
+      this.showError();
     }
     
+  }
+  showError(){
+    this.setState({showError: true});
+    setTimeout(()=>{
+      this.setState({showError: false});
+    }, 2000);
+    // this.setState({showError: false});
   }
   renderTiles(){
     // console.log(this.props.humors);
@@ -78,7 +91,14 @@ class Humorki extends Component {
     if(this.props.humors){
       return (
         <div>
-          { this.state.showError ? <p>Już zagłosowałeś dziś na tego nauczyciela</p> : "" }
+          <SmallHeader />
+          <Animation
+            transitionName="appear"
+            transitionEnterTimeout={0}
+            transitionLeaveTimeout={0}
+            >
+          { this.state.showError ? <div className="error">Już zagłosowałeś dziś na tego nauczyciela</div> : "" }
+          </Animation>
           <h4 className="hint">Kliknij odpowiednią buźkę aby zagłosować!</h4>
           <div className="humorContainer">
             {this.renderTiles()}
