@@ -44,7 +44,7 @@ class Home extends Component {
           <nav className="menu-items-container">
             <Link to="/humorki" className="menu-item humorki"><h3>HUMORKI</h3></Link>
             <Link to="/" className="menu-item sklep"><h3>SKLEP KSIĄŻKOWY</h3></Link>
-            <Link to="/" className="menu-item info"><h3>SPEJALNE OGŁOSZENIA</h3></Link>
+            <Link to="/" className="menu-item info"><h3>SPECJALNE OGŁOSZENIA</h3></Link>
             <Link to="/" className="menu-item plan"><h3>PLAN, ZASTĘPSTWA</h3></Link>
           </nav>
           <footer>
@@ -54,10 +54,7 @@ class Home extends Component {
             </div>
             <div className="testers">
               <h4>Testerzy Developerscy</h4>
-              <p>Paweł Tworkowski</p>
-              <p>Daniel Maszynkiewicz</p>
-              <p>Igor Tyjewski</p>
-              <p>Mateusz Madej</p>
+              <p>Jeszcze nie znani</p>
             </div>              
             <hr />
             <p>Copyright&copy; 2018</p> 
