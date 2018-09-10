@@ -54,7 +54,10 @@ class Home extends Component {
             </div>
             <div className="testers">
               <h4>Testerzy Developerscy</h4>
-              <p>Jeszcze nie znani</p>
+              <p>Paweł Tworkowski</p>
+              <p>Artur Kacperski</p>
+              <p>Igor Tyjewski</p>
+              <p>Piotr Trochonowicz</p>
             </div>              
             <hr />
             <p>Copyright&copy; 2018</p> 
