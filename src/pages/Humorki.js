@@ -28,8 +28,8 @@ class Humorki extends Component {
     let flag = true;
     if(localStorage.getItem('voting') !== null){
 
-      let list = Array.from(localStorage.getItem("voting"));
-
+      let list = localStorage.getItem("voting");
+      list = list.split(",");
       list.find((person) =>{
         if(person == userId) {
           flag = false;
@@ -81,7 +81,7 @@ class Humorki extends Component {
     // this.setState({showError: false});
   }
   renderTiles(){
-    // console.log(this.props.humors);
+    //console.log(this.props.humors);
     return this.props.humors.map((humor, key) => {
       return <HumorTile catchVote={this.catchVote} humor={humor} key={key}/>
     });

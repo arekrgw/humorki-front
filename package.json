@@ -1,5 +1,6 @@
 {
   "name": "humors",
+  "homepage": "http://temp.5v.pl/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
